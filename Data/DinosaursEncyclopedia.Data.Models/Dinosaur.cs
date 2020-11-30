@@ -15,5 +15,8 @@
 
         [Required]
         public string Diet { get; set; }
+
+        [Required]
+        public string ImageUrl { get; set; }
     }
 }

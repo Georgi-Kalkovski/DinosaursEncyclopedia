@@ -12,6 +12,13 @@ function loadDataTable() {
             "datatype": "json"
         },
         "columns": [
+            {
+                "data": "imageUrl", "render": function (data) {
+                    return `
+                             <img src="${data}" class="img-fluid">
+                             <a href="${data}" class="link-preview venobox" data-gall="portfolioGallery"><i class="ion ion-eye"></i></a>
+                           `
+                }},
             { "data": "name", "width": "20%" },
             { "data": "period", "width": "20%" },
             { "data": "diet", "width": "20%" },
@@ -28,7 +35,7 @@ function loadDataTable() {
                             Delete
                         </a>
                         </div>`;
-                }, "width": "40%"
+                }, "width": "20%"
             }
         ],
         "language": {
@@ -63,3 +70,4 @@ function Delete(url) {
         }
     });
 }
+
